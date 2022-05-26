@@ -13,6 +13,8 @@ public class SuperList<T> extends ListManager<T>  {
     @Override
     public T removeElement(int position) {
 
+        position--;
+
         return list.remove(position);
     }
 
@@ -20,7 +22,7 @@ public class SuperList<T> extends ListManager<T>  {
     public void showElements() {
 
         Iterator<T> recorrido = list.iterator();
-        System.out.println("Super lista -> [");
+        System.out.print("Super lista -> [");
 
         while(recorrido.hasNext()) {
             T elemento = recorrido.next();
@@ -34,9 +36,12 @@ public class SuperList<T> extends ListManager<T>  {
     @Override
     public void showReversedElements() {
 
-        System.out.println("Super List Reverse -> [");
+        System.out.print("Super List Reverse -> [");
 
-        for (int i = list.size(); i >= 0; i--) {
+        int tamaño = list.size();
+        tamaño--;
+
+        for (int i = tamaño; i >= 0; i--) {
 
             System.out.print(list.get(i)+" ");
 

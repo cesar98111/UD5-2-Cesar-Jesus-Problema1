@@ -11,5 +11,10 @@ public class Main {
         listaEnteros.addElement(5);
         listaEnteros.addElement(6);
 
+        listaEnteros.removeElement(3);
+
+        listaEnteros.showElements();
+
+        listaEnteros.showReversedElements();
     }
 }
